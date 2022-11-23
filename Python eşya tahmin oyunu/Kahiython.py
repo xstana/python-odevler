@@ -1,3 +1,9 @@
+#Telefon, Radyo, TV, Kamera, Saat gibi bir elektronik eşyayı aklımızdan tutalım.
+#Bilgisayarda bu elektronik nesneyi, aşağıdaki karar ağacına benzer ya da aynı şeklinde
+#bir karar ağacını kodlayarak bulunuz.
+
+
+# Boolean olarak çeeşitli değişken koşulları ve özellikleri belirttik
 database = [
     {"secenek":"Telefon", "goruntu":True, "tasinir":True, "arama":True , "cekim":False, "anten":False, "kol":False},
 
@@ -12,6 +18,7 @@ database = [
 ]
 
 
+#kullanıcının karşılaşacağı ilk çıktı ve yönlendirmeler
 print(""" 
 
 Kahiython'a hoş geldin!
@@ -39,7 +46,7 @@ Devam etmek için enter'a bas!
 """)
 input()
 
-
+# İhtimal olarak hesabı yapan fonksiyonumuz gerekli hesaplamayı yapıp soruları bu doğrultuda özelleştirecek ve minimum soru ile cevabı bulmamızı sağlayacak
 def ihtimal(answer, property):
     if answer == "e":
         ans = True
@@ -58,10 +65,10 @@ def ihtimal(answer, property):
         print("BULDUM ! Seçtiğin şey bir "+database[0]["secenek"])
         quit()
 
-
+# Sorularımız ve e durumunda true konumuna alacağı özellik
+        
 ans = input("Bu eşyadan bir şeyler izleyebilirmisin? (e,h)")
 ihtimal(ans, "goruntu")
-
 
 ans = input("Bu şeyi kolaylıkla yanında taşıyabilirmisin?(e,h)")
 ihtimal(ans, "tasinir")
