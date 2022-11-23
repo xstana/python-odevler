@@ -1,4 +1,9 @@
-print("""********************************
+
+# Dünyannın en basit ve vasıfsız hesap makinesi saçma işlemler yapmaya çalıştığınızda bi tık sinirleniyo
+
+
+# Kullanıcıya ilk verdiğimiz çıktı
+print("""******************************** 
 
  * Agresif hesap makinesi 1.0
 
@@ -11,10 +16,15 @@ Yapmak istediğiniz işlemi tuşlayınız
  
 ****************************************
 """)
+
+
+# Sürekli dönen while döngüsü içerisinde işlem seeçimimiz bu sayede sonuç aldıktan hemen sonra tekrar işlem yapabileceğiz
 while True:
     islem = input("İşlem Seçiniz (Çıkış için 'q'): ")
     if islem == 'q':
         quit()
+     
+     # İşlemlerimizi koşul belirterek kontrol edip tanımladık
     elif islem == "1":
         print("+  ------Toplama İşlemi------  +")
         sayi1 = int(input("1.Sayıyı Giriniz: "))
@@ -39,6 +49,8 @@ while True:
             sayi1 = int(input("1.Sayıyı Giriniz: "))
             sayi2 = int(input("2.Sayıyı Giriniz: "))
             print("{}  /   {}    =  {:.2f}".format(sayi1, sayi2, sayi1/sayi2))
+           
+           # Taş devrindedn biri yanlış girdi girerse program mala bağlamasın diye exceptler ve else
         except ZeroDivisionError:
             print("Sence bir sayıyı sıfıra bölebilirmisin bebis?")
         except ValueError:
